@@ -1,0 +1,9 @@
+{% extends "layouts/main.twig" %}
+{% block content %}
+    <h2>Add a new Topic</h2>
+    <form action="{{ '/topics'|toUrl }}" method="POST">
+        <input type="text" name="title" placeholder="title"/><br />
+        <textarea placeholder="content" name="content" id="content" cols="30" rows="10"></textarea><br />
+        <input type="submit" value="add"/>
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layouts/main.twig" %}
+{% block content %}
+    <h2>Topics <a href="{{ '/topics/new'|toUrl }}" title="add new topic">Add</a></h2>
+
+    {% for topic in topics %}
+        <hr/>
+        <h3>{{ topic.getTitle() }} <a href="{{ ('/topics/delete/' ~ topic.getID())|toUrl }}" title="delete">delete</a></h3>
+        <div>{{ topic.getContent() }}</div>
+        <a href="{{ ('/topics/' ~ topic.ID()) |toUrl }}" title="read more">read more</a>
+
+    {% else %}
+        <p>No topics</p>
+    {% endfor %}
+{% endblock %}

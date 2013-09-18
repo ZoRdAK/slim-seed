@@ -1,0 +1,6 @@
+{% extends "layouts/main.twig" %}
+{% block content %}
+    <h2>{{ topic.getTitle() }}</h2>
+    <div>{{ topic.getContent() }}</div>
+    <a href="{{ '/topics'|toUrl }}" title="back">view all topics</a>
+{% endblock %}

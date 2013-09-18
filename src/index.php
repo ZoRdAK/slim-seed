@@ -8,8 +8,11 @@ $app = new \Slim\Slim(array(
 ));
 
 require_once DIR . '/app/tools/utils.php';
+require_once DIR . '/app/tools/Db.php';
 
 require_once DIR . '/app/controllers/apps.php';
+require_once DIR . '/app/controllers/topics.php';
 
+Db::connect('slimseed');
 
 $app->run();

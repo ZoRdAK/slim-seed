@@ -1,5 +1,5 @@
 <?php
 
 $app->get('/', function () use ($app) {
-	$app->render('home', array('name' => 'Karl'));
+	$app->render('home.twig', array('name' => 'Karl'));
 });

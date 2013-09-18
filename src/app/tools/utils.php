@@ -27,3 +27,9 @@ function currentUrl()
 
 	return $pageURL;
 }
+
+function app_halt_json(\Slim\Slim $app, $object=null, $statusCode = 200)
+{
+	$app->response()->header('Content-Type', 'application/json');
+	$app->halt($statusCode, json_encode($object));
+}
